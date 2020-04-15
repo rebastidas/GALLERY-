@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rosybrown;
+}
+
+header{
+        background: #ffffff;
+        padding: 1rem;
+        text-align: center;
+}
+
+
+img{
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+    border: solid 1px rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: stretch;
+    column-gap: 10px;
+    row-gap: 10px;
+    overflow: none;
+}
+
+.row{
+
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.photo:hover{
+    transform: scale(1.2);
+    transition: 400ms ease-out;
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modalContent{
+    margin: auto;
+    display: block;
+    width: auto;
+    height: 70vh;
+}
+
+.modalContent{
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 1s;
+    animation-name: zoom;
+    animation-duration: 1s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+
+  .close {
+    border:none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: red;
+    font-size: 2rem;
+  }
+
+.close:hover, .next:hover, .prev:hover{
+    opacity: 0.5;
+    transform: scale(1.2);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.next{
+    position: absolute;
+    top: 50vh;
+    right: 35px;
+    border: none;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0) ;
+}
+
+.prev{
+    position: absolute;
+    top: 50vh;
+    left: 35px;
+    border: none;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0) ;
+}
